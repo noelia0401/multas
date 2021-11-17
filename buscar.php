@@ -1,7 +1,25 @@
 
 <?php
-
+session_start();
 include 'head.php';
+
+if (isset($_REQUEST['buscar']))
+{
+ $matricula=$_REQUEST['matricula'];
+
+ foreach ($_SESSION['multas'] as $clave)
+ {
+   foreach ($clave as $valor=>$dato)
+   {
+      if ($dato==$matricula){
+        echo $valor.": ".$dato;
+      }
+   }
+ }
+
+}
+
+
 echo' 
 Introduce la Matricula de la Multa/s <mark> NO PAGADAS</mark> a Buscar<mark>(1 Puntos)<br><br>
                          
