@@ -6,11 +6,10 @@ if (isset($_REQUEST['borrar']))
   
   $matricula=$_REQUEST['matricula'];
   $fecha=$_REQUEST['fecha_hora'];
-
+  $i=0;
   foreach ($_SESSION['multas'] as $clave=>$valor){
     
-    unset($_SESSION['multas'][$clave][$valor])
-      
+
   }
  
   print_r($_SESSION['multas']);

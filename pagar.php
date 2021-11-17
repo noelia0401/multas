@@ -11,10 +11,7 @@ if (isset($_REQUEST['pagar']))
  {
    foreach ($clave as $valor=>$dato)
    {
-      if ($dato==$matricula){
-        
-      }
-   }
+    
  }
  
 }
