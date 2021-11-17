@@ -4,7 +4,18 @@ include 'head.php';
 if (isset($_REQUEST['pagar']))
 {
   $fecha= $_REQUEST['fecha_hora'];
+  $matricula=$_REQUEST['matricula'];
   echo $fecha;
+  
+ foreach ($_SESSION['multas'] as $clave)
+ {
+   foreach ($clave as $valor=>$dato)
+   {
+      if ($dato==$matricula){
+        
+      }
+   }
+ }
  
 }
 
