@@ -5,29 +5,16 @@ if (isset($_REQUEST['borrar']))
 {
   
   $matricula=$_REQUEST['matricula'];
-  /*foreach ($_SESSION['multas'] as $clave)
-  {
-    foreach ($clave as $valor=>$dato)
-    {
-       if (($_SESSION['multas'][$clave][$valor])==$matricula){
-         echo "a borrar";
-         //unset($_SESSION['multas'][$clave]);
-       }
-    }
-  }*/
+  $fecha=$_REQUEST['fecha_hora'];
 
-  for ($i=0;$i<sizeof($_SESSION['multas']);$i++)
-  {        
-    for ($j=0;j<3;$j++)
-    {            
-        if ((stristr($matricula, $_SESSION['multas'][$i][$j])))
-        {
-        echo "existe";
-        
-    }
-  } 
+  foreach ($_SESSION['multas'] as $clave=>$valor){
+    
+    unset($_SESSION['multas'][$clave][$valor])
+      
+  }
+ 
   print_r($_SESSION['multas']);
-}
+
 }
 
 
