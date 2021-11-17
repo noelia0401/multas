@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'head.php';
 if (isset($_REQUEST['pagar']))
 {
